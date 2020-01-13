@@ -1,0 +1,46 @@
+<div class="container">
+    <h2>My Heroes</h2>
+  <label>Name:
+    <input #todoName>
+
+  </label>
+  <button class="button" (click)="add(todoName.value);todoName.value='';">add</button>
+
+    <ul class="todos">
+      <li *ngFor="let todo of todos">
+        <a routerLink="/list-details/{{todo.id}}">
+          <span class="badge">{{todo.id}}</span> {{todo.name}}
+        </a>
+        <button class="delete" title="delete todo" (click)="delete(todo)">X</button>
+      </li>
+    </ul>
+
+</div>
+<!-- <div class="container">
+<ul class="todos">
+    <li *ngFor ="let todo of todoslist" (click)="onSelect(todo)" >
+
+        <span class="tag">{{todo.id}}</span> {{todo.name}}
+       
+    </li>
+</ul>
+
+
+
+
+    <h1>To-do List Details</h1>
+    <div *ngIf ="selectedTodo">
+<div><span>id:</span>{{selectedTodo.id}}</div>
+<br>
+
+<div><span>Name:</span>{{selectedTodo.name}}</div>
+
+<h1>{{selectedTodo.name}} details</h1>
+<div><span>id : </span>{{selectedTodo.id}}</div>
+<label>Name:
+    <input type="text" [(ngModel)] ="selectedTodo.name" placeholder="name"/>
+
+</label>
+</div>
+</div> -->
+

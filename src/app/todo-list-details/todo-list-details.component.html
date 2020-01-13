@@ -1,0 +1,29 @@
+<div class="container">
+ 
+    <div *ngIf ="todo">
+  
+<h1>{{todo.name | uppercase}}</h1>
+
+<div>
+    <span>id :</span>{{todo.id}}  </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+       elit. Impedit tenetur atque sunt, accusamus exercitationem ullam dolore error
+       repellendus, nobis, distinctio doloremque
+        qui voluptate modi quia ea dolores alias! Maxime, enim.</p>
+   
+      <div>
+
+          <label>
+            Name:
+            <input [(ngModel)]= "todo.name" placeholder="name"/>
+          </label>
+       
+        </div>
+        <br>
+        <button class="button is-primary" (click) ="goBack()">goback</button> 
+        <button class="button is-primary" (click)="save()">save</button>
+</div>
+</div>
+
+
+
