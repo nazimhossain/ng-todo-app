@@ -14,7 +14,7 @@ import{Todo} from './todo';
   providedIn: 'root'
 })
 export class TodoService {
-private todosUrl = 'api/todos';
+private todosUrl = 'api/todos/change';
 
 httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
